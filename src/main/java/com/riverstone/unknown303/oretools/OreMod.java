@@ -3,6 +3,7 @@ package com.riverstone.unknown303.oretools;
 import com.mojang.logging.LogUtils;
 import com.riverstone.unknown303.oretools.blocks.ModBlocks;
 import com.riverstone.unknown303.oretools.items.ModItems;
+import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -41,7 +42,16 @@ public class OreMod {
     }
 
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
-        //Creative Mod Tabs Here
+        if (event.getTabKey() == CreativeModeTabs.COMBAT) {
+            event.accept(ModItems.LAPIS_SWORD.get());
+            event.accept(ModItems.LAPIS_AXE.get());
+        }
+        if (event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
+            event.accept(ModItems.LAPIS_SHOVEL.get());
+            event.accept(ModItems.LAPIS_PICKAXE.get());
+            event.accept(ModItems.LAPIS_AXE.get());
+            event.accept(ModItems.LAPIS_HOE.get());
+        }
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call

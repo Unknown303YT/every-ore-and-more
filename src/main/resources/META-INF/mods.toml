@@ -17,7 +17,7 @@ license="All Rights Reserved"
 # The modid of the mod
 modId="oretools" #mandatory
 # The version number of the mod
-version="1.0.0-SNAPSHOT-1.20.1" #mandatory
+version="0.1.0-SNAPSHOT-1.20.1" #mandatory
 # A display name for the mod
 displayName="Every Ore and More" #mandatory
 # A URL to query for updates for this mod. See the JSON update specification https://docs.minecraftforge.net/en/latest/misc/updatechecker/
@@ -39,8 +39,9 @@ authors="Unknown_303YT" #optional
 displayTest="MATCH_VERSION" # MATCH_VERSION is the default if nothing is specified (#optional)
 
 # The description text for the mod (multi line!) (#mandatory)
-description='''This mod adds Tools and Armor for Copper, Amethyst and Emerald, as well as Chainmail Tools.
-Other blocks and items are planned (including lapis items), but they will be added in a future update'''
+description='''
+This mod adds Tools and Armor for Lapis, Amethyst and Emerald.
+Other blocks and items are planned (including as well as Chainmail Tools and Copper and Coal items), but they will be added in a future update.'''
 # A dependency - use the . to indicate dependency for a specific modid. Dependencies are optional.
 [[dependencies.oretools]] #optional
     # the modid of the dependency
