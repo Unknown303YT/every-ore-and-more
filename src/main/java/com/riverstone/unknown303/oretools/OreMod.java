@@ -10,10 +10,12 @@ import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.minecraftforge.forgespi.language.IModInfo;
 import org.slf4j.Logger;
 import software.bernie.geckolib.GeckoLib;
 
@@ -21,15 +23,17 @@ import software.bernie.geckolib.GeckoLib;
 @Mod(OreMod.MOD_ID)
 public class OreMod {
     public static final String MOD_ID = "oretools";
-    private static final Logger LOGGER = LogUtils.getLogger();
+    public static final Logger LOGGER = LogUtils.getLogger();
+
+    public static IModInfo iModInfo;
 
     public OreMod() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
+        iModInfo = ModLoadingContext.get().getActiveContainer().getModInfo();
+
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
-
-        GeckoLib.initialize();
 
         modEventBus.addListener(this::commonSetup);
 
@@ -45,6 +49,11 @@ public class OreMod {
         if (event.getTabKey() == CreativeModeTabs.COMBAT) {
             event.accept(ModItems.LAPIS_SWORD.get());
             event.accept(ModItems.LAPIS_AXE.get());
+
+            event.accept(ModItems.LAPIS_HELMET.get());
+            event.accept(ModItems.LAPIS_CHESTPLATE.get());
+            event.accept(ModItems.LAPIS_LEGGINGS.get());
+            event.accept(ModItems.LAPIS_BOOTS.get());
         }
         if (event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
             event.accept(ModItems.LAPIS_SHOVEL.get());

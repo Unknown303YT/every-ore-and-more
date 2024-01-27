@@ -17,11 +17,11 @@ license="All Rights Reserved"
 # The modid of the mod
 modId="oretools" #mandatory
 # The version number of the mod
-version="0.1.0-SNAPSHOT-1.20.1" #mandatory
+version="0.1.0-1.20.1" #mandatory
 # A display name for the mod
 displayName="Every Ore and More" #mandatory
 # A URL to query for updates for this mod. See the JSON update specification https://docs.minecraftforge.net/en/latest/misc/updatechecker/
-#updateJSONURL="https://change.me.example.invalid/updates.json" #optional
+#updateJSONURL="https://github.com/Unknown303YT/unknown303-files/raw/main/everyore-update.json" #optional
 # A URL for the "homepage" for this mod, displayed in the mod UI
 displayURL="https://modrinth.com/mod/every-ore/" #optional
 # A file name (in the root of the mod JAR) containing a logo for display

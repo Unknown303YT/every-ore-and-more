@@ -1,11 +1,10 @@
 package com.riverstone.unknown303.oretools.datagen;
 
 import com.riverstone.unknown303.oretools.OreMod;
+import com.riverstone.unknown303.oretools.items.ModItems;
 import net.minecraft.data.PackOutput;
-import net.minecraft.data.recipes.FinishedRecipe;
-import net.minecraft.data.recipes.RecipeCategory;
-import net.minecraft.data.recipes.RecipeProvider;
-import net.minecraft.data.recipes.SimpleCookingRecipeBuilder;
+import net.minecraft.data.recipes.*;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.AbstractCookingRecipe;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.RecipeSerializer;
@@ -22,7 +21,72 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
     @Override
     protected void buildRecipes(Consumer<FinishedRecipe> pWriter) {
-
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.LAPIS_HELMET.get())
+                .pattern("LLL")
+                .pattern("L L")
+                .define('L', Items.LAPIS_LAZULI)
+                .unlockedBy(getHasName(Items.LAPIS_LAZULI), has(Items.LAPIS_LAZULI))
+                .save(pWriter);
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.LAPIS_CHESTPLATE.get())
+                .pattern("L L")
+                .pattern("LLL")
+                .pattern("LLL")
+                .define('L', Items.LAPIS_LAZULI)
+                .unlockedBy(getHasName(Items.LAPIS_LAZULI), has(Items.LAPIS_LAZULI))
+                .save(pWriter);
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.LAPIS_LEGGINGS.get())
+                .pattern("LLL")
+                .pattern("L L")
+                .pattern("L L")
+                .define('L', Items.LAPIS_LAZULI)
+                .unlockedBy(getHasName(Items.LAPIS_LAZULI), has(Items.LAPIS_LAZULI))
+                .save(pWriter);
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.LAPIS_BOOTS.get())
+                .pattern("L L")
+                .pattern("L L")
+                .define('L', Items.LAPIS_LAZULI)
+                .unlockedBy(getHasName(Items.LAPIS_LAZULI), has(Items.LAPIS_LAZULI))
+                .save(pWriter);
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.LAPIS_SWORD.get())
+                .pattern(" L ")
+                .pattern(" L ")
+                .pattern(" S ")
+                .define('L', Items.LAPIS_LAZULI)
+                .define('S', Items.STICK)
+                .unlockedBy(getHasName(Items.LAPIS_LAZULI), has(Items.LAPIS_LAZULI))
+                .save(pWriter);
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.LAPIS_AXE.get())
+                .pattern("LL ")
+                .pattern("LS ")
+                .pattern(" S ")
+                .define('L', Items.LAPIS_LAZULI)
+                .define('S', Items.STICK)
+                .unlockedBy(getHasName(Items.LAPIS_LAZULI), has(Items.LAPIS_LAZULI))
+                .save(pWriter);
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.LAPIS_PICKAXE.get())
+                .pattern("LLL")
+                .pattern(" S ")
+                .pattern(" S ")
+                .define('L', Items.LAPIS_LAZULI)
+                .define('S', Items.STICK)
+                .unlockedBy(getHasName(Items.LAPIS_LAZULI), has(Items.LAPIS_LAZULI))
+                .save(pWriter);
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.LAPIS_SHOVEL.get())
+                .pattern(" L ")
+                .pattern(" S ")
+                .pattern(" S ")
+                .define('L', Items.LAPIS_LAZULI)
+                .define('S', Items.STICK)
+                .unlockedBy(getHasName(Items.LAPIS_LAZULI), has(Items.LAPIS_LAZULI))
+                .save(pWriter);
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.LAPIS_HOE.get())
+                .pattern("LL ")
+                .pattern(" S ")
+                .pattern(" S ")
+                .define('L', Items.LAPIS_LAZULI)
+                .define('S', Items.STICK)
+                .unlockedBy(getHasName(Items.LAPIS_LAZULI), has(Items.LAPIS_LAZULI))
+                .save(pWriter);
     }
 
     protected static void oreSmelting(Consumer<FinishedRecipe> pFinishedRecipeConsumer, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult, float pExperience, int pCookingTIme, String pGroup) {
