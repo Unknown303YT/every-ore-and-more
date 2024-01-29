@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "oretools",
+	"version": "0.1.0-SNAPSHOT-fabric-1.20.1",
+	"name": "Every Ore and More",
+	"description": "This mod adds Tools and Armor for Lapis, Amethyst and Emerald.\nOther blocks and items are planned (including as well as Chainmail Tools and Copper and Coal items), but they will be added in a future update.",
+	"authors": [
+		"Unknown_303YT"
+	],
+	"contact": {
+		"homepage": "https://modrinth.com/mod/every-ore",
+		"sources": "https://github.com/Unknown303YT/every-ore-and-more"
+	},
+	"license": "All Rights Reserved",
+	"icon": "assets/oretools/logo.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+          "com.riverstone.unknown303.oretools.OreMod"
+		],
+		"client": [
+			"com.riverstone.unknown303.oretools.OreModClient"
+		],
+		"fabric-datagen": [
+			"com.riverstone.unknown303.oretools.OreModDataGenerator"
+		]
+	},
+	"mixins": [
+		"oretools.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.15.6",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
