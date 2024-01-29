@@ -25,5 +25,15 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                 .add(ModItems.LAPIS_CHESTPLATE.get())
                 .add(ModItems.LAPIS_LEGGINGS.get())
                 .add(ModItems.LAPIS_BOOTS.get());
+        this.tag(ItemTags.SWORDS)
+                .add(ModItems.LAPIS_SWORD.get());
+        this.tag(ItemTags.AXES)
+                .add(ModItems.LAPIS_AXE.get());
+        this.tag(ItemTags.PICKAXES)
+                .add(ModItems.LAPIS_PICKAXE.get());
+        this.tag(ItemTags.SHOVELS)
+                .add(ModItems.LAPIS_SHOVEL.get());
+        this.tag(ItemTags.HOES)
+                .add(ModItems.LAPIS_HOE.get());
     }
 }

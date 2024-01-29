@@ -13,7 +13,7 @@ import java.util.EnumMap;
 import java.util.function.Supplier;
 
 public enum ModArmorMaterials implements ArmorMaterial {
-    LAPIS("lapis", 32, new int[]{ 3, 8, 6, 3 }, 32,
+    LAPIS("lapis", 27, new int[]{ 3, 8, 6, 3 }, 32,
             SoundEvents.ARMOR_EQUIP_DIAMOND, 1.75f, 0.0F, () -> Ingredient.of(Items.LAPIS_LAZULI));
 
     private final String name;

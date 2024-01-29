@@ -1,2 +1,7 @@
-// 1.20.1	2024-01-26T13:33:25.456381	Tags for minecraft:item mod id oretools
+// 1.20.1	2024-01-29T15:20:26.729046	Tags for minecraft:item mod id oretools
+ce5cfa3caa160f8beceb62f67ddec4a64c2344ed data/minecraft/tags/items/axes.json
+8bd3798960d2c6a9576a682169834ce68b950cba data/minecraft/tags/items/hoes.json
+1214397e46a7db094b2aeb0dbf672bf34d5162b7 data/minecraft/tags/items/pickaxes.json
+d188d3e0159e014eeb2389fc9ec72a3003a0fb71 data/minecraft/tags/items/shovels.json
+11bab90bc0e1e43821e922424fbf62d675e67a1b data/minecraft/tags/items/swords.json
 2c69e9d5903e051de213b8cdb1ab6f53cf7fecef data/minecraft/tags/items/trimmable_armor.json

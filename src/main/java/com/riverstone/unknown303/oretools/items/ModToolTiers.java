@@ -14,7 +14,7 @@ import java.util.List;
 
 public class ModToolTiers {
     public static final Tier LAPIS = TierSortingRegistry.registerTier(
-            new ForgeTier(3, 1570, 8.5f, 3.0f, 32,
+            new ForgeTier(3, 1570, 8.5f, 3.0f, 27,
                     ModTags.Blocks.NEEDS_LAPIS_TOOL, () -> Ingredient.of(Items.LAPIS_LAZULI)),
             new ResourceLocation(OreMod.MOD_ID, "lapis"), List.of(Tiers.DIAMOND), List.of(Tiers.NETHERITE));
 }
