@@ -1,5 +1,6 @@
 package com.riverstone.unknown303.oretools;
 
+import com.riverstone.unknown303.oretools.item.ModItems;
 import net.fabricmc.api.ModInitializer;
 
 import org.slf4j.Logger;
@@ -11,5 +12,7 @@ public class OreMod implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
+
+		ModItems.registerModItems();
 	}
 }
