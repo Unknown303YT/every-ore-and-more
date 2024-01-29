@@ -1,1 +1,11 @@
-// 1.20.1	2024-01-29T17:03:43.6375683	Every Ore and More/Recipes
+// 1.20.1	2024-01-30T10:24:26.8699284	Every Ore and More/Recipes
+c180cd09cd4c3aeb5737363df30f73f9735226ec data\oretools\advancements\recipes\tools\lapis_axe.json
+b5c7d9e92695d425d4892800772fcfefe7cb3d48 data\oretools\advancements\recipes\tools\lapis_pickaxe.json
+112658dd9c1231fdbc44e76472db5486995e8973 data\oretools\advancements\recipes\tools\lapis_hoe.json
+a21cb2536b349d0d9287edb0257b10fab3be53e0 data\oretools\recipes\lapis_sword.json
+8973aae72c48fe5019960f829eb5cb1853a1ccb9 data\oretools\recipes\lapis_shovel.json
+c42b62fb4c178d235e49efabd904cab5a64fb257 data\oretools\advancements\recipes\combat\lapis_sword.json
+d7bdec24381dc78dd408d66b42041fc4bf9bf191 data\oretools\recipes\lapis_axe.json
+cfdc401e06bfe9b4676ea7dada88fcd9620a2f40 data\oretools\recipes\lapis_hoe.json
+4e71248479c7d7f18ee128bb3fcd6dbf0301daad data\oretools\recipes\lapis_pickaxe.json
+3796cf17701ae88016989addc0bbcc8079ba3455 data\oretools\advancements\recipes\tools\lapis_shovel.json

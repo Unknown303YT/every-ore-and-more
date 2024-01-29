@@ -1,1 +1,6 @@
-// 1.20.1	2024-01-29T17:03:43.6365668	Every Ore and More/Tags for minecraft:item
+// 1.20.1	2024-01-30T10:24:26.8699284	Every Ore and More/Tags for minecraft:item
+f2414a0c5325aeee0c9a6849dac842a6de9b262f data\minecraft\tags\items\swords.json
+ca91c9f9c5c94059821498f4f592506605dd7c43 data\minecraft\tags\items\shovels.json
+d8311a3b733d1109ff69210ba328da4fd08a7c09 data\minecraft\tags\items\pickaxes.json
+d486e787d85b9850d306a71b6fd2a361f86e1256 data\minecraft\tags\items\axes.json
+91ea28bcad1a2d97140c301401f75e29138914ae data\minecraft\tags\items\hoes.json

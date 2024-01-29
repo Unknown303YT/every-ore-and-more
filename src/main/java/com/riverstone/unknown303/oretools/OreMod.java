@@ -1,5 +1,6 @@
 package com.riverstone.unknown303.oretools;
 
+import com.riverstone.unknown303.oretools.item.ModCreativeModeTabs;
 import com.riverstone.unknown303.oretools.item.ModItems;
 import net.fabricmc.api.ModInitializer;
 
@@ -13,6 +14,8 @@ public class OreMod implements ModInitializer {
 	@Override
 	public void onInitialize() {
 
-		ModItems.registerModItems();
+		ModItems.register();
+
+		ModCreativeModeTabs.register();
 	}
 }

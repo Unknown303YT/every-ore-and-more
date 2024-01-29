@@ -14,7 +14,7 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.Rarity;
 
 public class ModItems {
-    
+
     public static final Item LAPIS_SWORD = registerItem("lapis_sword",
             new SwordItem(ModToolMaterials.LAPIS, 3, -2.3f,
                     new FabricItemSettings().maxCount(1).rarity(Rarity.UNCOMMON)) {
@@ -47,25 +47,11 @@ public class ModItems {
             new HoeItem(ModToolMaterials.LAPIS, -3, 0.1f,
                     new FabricItemSettings().maxCount(1).rarity(Rarity.UNCOMMON)));
 
-    private static void addItemsToCombatTab(FabricItemGroupEntries pOutput) {
-        pOutput.addAfter(new ItemStack(Items.GOLDEN_SWORD), new ItemStack(LAPIS_SWORD));
-        pOutput.addAfter(new ItemStack(Items.GOLDEN_AXE), new ItemStack(LAPIS_AXE));
-    }
-
-    private static void addItemsToToolsTab(FabricItemGroupEntries pOutput) {
-        pOutput.addAfter(new ItemStack(Items.GOLDEN_HOE), new ItemStack(LAPIS_SHOVEL));
-        pOutput.addAfter(new ItemStack(LAPIS_SHOVEL), new ItemStack(LAPIS_PICKAXE));
-        pOutput.addAfter(new ItemStack(LAPIS_PICKAXE), new ItemStack(LAPIS_AXE));
-        pOutput.addAfter(new ItemStack(LAPIS_AXE), new ItemStack(LAPIS_HOE));
-    }
-
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, new Identifier(OreMod.MOD_ID, name), item);
     }
 
-    public static void registerModItems() {
+    public static void register() {
         OreMod.LOGGER.info("Registering Items for " + OreMod.MOD_ID);
-
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(ModItems::addItemsToCombatTab);
     }
 }
