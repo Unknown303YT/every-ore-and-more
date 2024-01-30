@@ -17,7 +17,7 @@ public enum ModArmorMaterials implements ArmorMaterial {
             SoundEvents.ARMOR_EQUIP_DIAMOND, 1.75f, 0.0F, () -> Ingredient.of(Items.LAPIS_LAZULI));
 
     private final String name;
-    private final int[] DURABILITY;
+    private final int[] durability;
     private final int durabilityMultiplier;
     private final int[] protection;
     private final int enchantability;
@@ -26,11 +26,12 @@ public enum ModArmorMaterials implements ArmorMaterial {
     private final float knockbackResistance;
     private final Supplier<Ingredient> repairIngredient;
     private final boolean useVanilla;
+
     private static final int[] BASE_DURABILITY = new int[]{ 11, 16, 15, 13};
 
     ModArmorMaterials(String name, int[] durability, int[] protection, int enchantability, SoundEvent equipSound, float toughness, float knockbackResistance, Supplier<Ingredient> repairIngredient) {
         this.name = name;
-        this.DURABILITY = durability;
+        this.durability = durability;
         this.durabilityMultiplier = 0;
         this.protection = protection;
         this.enchantability = enchantability;
@@ -44,7 +45,7 @@ public enum ModArmorMaterials implements ArmorMaterial {
     ModArmorMaterials(String name, int durabilityMultiplier, int[] protection, int enchantability, SoundEvent equipSound, float toughness, float knockbackResistance, Supplier<Ingredient> repairIngredient) {
         this.name = name;
         this.durabilityMultiplier = durabilityMultiplier;
-        this.DURABILITY = new int[]{ 0, 0, 0, 0 };
+        this.durability = new int[]{ 0, 0, 0, 0 };
         this.protection = protection;
         this.enchantability = enchantability;
         this.equipSound = equipSound;
@@ -60,7 +61,7 @@ public enum ModArmorMaterials implements ArmorMaterial {
         if (useVanilla) {
             return BASE_DURABILITY[type.ordinal()] * this.durabilityMultiplier;
         } else {
-            return DURABILITY[type.ordinal()];
+            return durability[type.ordinal()];
         }
     }
 
