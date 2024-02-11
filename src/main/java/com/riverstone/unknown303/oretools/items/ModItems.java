@@ -20,7 +20,7 @@ public class ModItems {
 
     public static final RegistryObject<Item> LAPIS_SWORD = ITEMS.register("lapis_sword",
             () -> new SwordItem(ModToolTiers.LAPIS, 3, -2.3f,
-                    new Item.Properties().stacksTo(1).rarity(Rarity.UNCOMMON)) {
+                    new Item.Properties().stacksTo(1)) {
                 @Override
                 public boolean hurtEnemy(ItemStack pStack, LivingEntity pTarget, LivingEntity pAttacker) {
                     pTarget.addEffect(new MobEffectInstance(MobEffects.WEAKNESS, 1800, 0,
@@ -31,36 +31,37 @@ public class ModItems {
             });
     public static final RegistryObject<Item> LAPIS_PICKAXE = ITEMS.register("lapis_pickaxe",
             () -> new PickaxeItem(ModToolTiers.LAPIS, 1, -2.7f,
-                    new Item.Properties().stacksTo(1).rarity(Rarity.UNCOMMON)));
+                    new Item.Properties().stacksTo(1)));
     public static final RegistryObject<Item> LAPIS_AXE = ITEMS.register("lapis_axe",
             () -> new AxeItem(ModToolTiers.LAPIS, 5.0F, -2.9f,
-                    new Item.Properties().stacksTo(1).rarity(Rarity.UNCOMMON)) {
+                    new Item.Properties().stacksTo(1)) {
                 @Override
                 public boolean hurtEnemy(ItemStack pStack, LivingEntity pTarget, LivingEntity pAttacker) {
                     pTarget.addEffect(new MobEffectInstance(MobEffects.HARM, 20, 1,
                             false, false, true), pAttacker);
-
-                    VersionChecker.CheckResult checkResult = VersionChecker.getResult(OreMod.iModInfo);
-                    OreMod.LOGGER.info(checkResult.toString());
 
                     return super.hurtEnemy(pStack, pTarget, pAttacker);
                 }
             });
     public static final RegistryObject<Item> LAPIS_SHOVEL = ITEMS.register("lapis_shovel",
             () -> new ShovelItem(ModToolTiers.LAPIS, 1.5F, -2.9f,
-                    new Item.Properties().stacksTo(1).rarity(Rarity.UNCOMMON)));
+                    new Item.Properties().stacksTo(1)));
     public static final RegistryObject<Item> LAPIS_HOE = ITEMS.register("lapis_hoe",
             () -> new HoeItem(ModToolTiers.LAPIS, -3, 0.1f,
-                    new Item.Properties().stacksTo(1).rarity(Rarity.UNCOMMON)));
+                    new Item.Properties().stacksTo(1)));
 
     public static final RegistryObject<Item> LAPIS_HELMET = ITEMS.register("lapis_helmet",
-            () -> new ModArmorItem(ModArmorMaterials.LAPIS, ArmorItem.Type.HELMET, new Item.Properties().stacksTo(1).rarity(Rarity.UNCOMMON)));
+            () -> new ModArmorItem(ModArmorMaterials.LAPIS, ArmorItem.Type.HELMET,
+                    new Item.Properties().stacksTo(1)));
     public static final RegistryObject<Item> LAPIS_CHESTPLATE = ITEMS.register("lapis_chestplate",
-            () -> new ModArmorItem(ModArmorMaterials.LAPIS, ArmorItem.Type.CHESTPLATE, new Item.Properties().stacksTo(1).rarity(Rarity.UNCOMMON)));
+            () -> new ModArmorItem(ModArmorMaterials.LAPIS, ArmorItem.Type.CHESTPLATE,
+                    new Item.Properties().stacksTo(1)));
     public static final RegistryObject<Item> LAPIS_LEGGINGS = ITEMS.register("lapis_leggings",
-            () -> new ModArmorItem(ModArmorMaterials.LAPIS, ArmorItem.Type.LEGGINGS, new Item.Properties().stacksTo(1).rarity(Rarity.UNCOMMON)));
+            () -> new ModArmorItem(ModArmorMaterials.LAPIS, ArmorItem.Type.LEGGINGS,
+                    new Item.Properties().stacksTo(1)));
     public static final RegistryObject<Item> LAPIS_BOOTS = ITEMS.register("lapis_boots",
-            () -> new ModArmorItem(ModArmorMaterials.LAPIS, ArmorItem.Type.BOOTS, new Item.Properties().stacksTo(1).rarity(Rarity.UNCOMMON)));
+            () -> new ModArmorItem(ModArmorMaterials.LAPIS, ArmorItem.Type.BOOTS,
+                    new Item.Properties().stacksTo(1)));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

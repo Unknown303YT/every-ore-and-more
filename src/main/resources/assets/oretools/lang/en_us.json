@@ -8,5 +8,8 @@
   "item.oretools.lapis_helmet": "Lapis Lazuli Helmet",
   "item.oretools.lapis_chestplate": "Lapis Lazuli Chestplate",
   "item.oretools.lapis_leggings": "Lapis Lazuli Leggings",
-  "item.oretools.lapis_boots": "Lapis Lazuli Boots"
+  "item.oretools.lapis_boots": "Lapis Lazuli Boots",
+
+  "creativetabs.oretools.oretools_tools": "Every Ore Tools",
+  "creativetabs.oretools.oretools_armor": "Every Ore Armor"
 }

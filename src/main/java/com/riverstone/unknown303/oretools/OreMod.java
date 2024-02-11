@@ -2,7 +2,9 @@ package com.riverstone.unknown303.oretools;
 
 import com.mojang.logging.LogUtils;
 import com.riverstone.unknown303.oretools.blocks.ModBlocks;
+import com.riverstone.unknown303.oretools.items.ModCreativeTabs;
 import com.riverstone.unknown303.oretools.items.ModItems;
+import com.riverstone.unknown303.oretools.sounds.ModSounds;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -25,15 +27,15 @@ public class OreMod {
     public static final String MOD_ID = "oretools";
     public static final Logger LOGGER = LogUtils.getLogger();
 
-    public static IModInfo iModInfo;
-
     public OreMod() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
-        iModInfo = ModLoadingContext.get().getActiveContainer().getModInfo();
-
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
+
+        ModSounds.register(modEventBus);
+
+        ModCreativeTabs.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
@@ -46,21 +48,6 @@ public class OreMod {
     }
 
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
-        if (event.getTabKey() == CreativeModeTabs.COMBAT) {
-            event.accept(ModItems.LAPIS_SWORD.get());
-            event.accept(ModItems.LAPIS_AXE.get());
-
-            event.accept(ModItems.LAPIS_HELMET.get());
-            event.accept(ModItems.LAPIS_CHESTPLATE.get());
-            event.accept(ModItems.LAPIS_LEGGINGS.get());
-            event.accept(ModItems.LAPIS_BOOTS.get());
-        }
-        if (event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
-            event.accept(ModItems.LAPIS_SHOVEL.get());
-            event.accept(ModItems.LAPIS_PICKAXE.get());
-            event.accept(ModItems.LAPIS_AXE.get());
-            event.accept(ModItems.LAPIS_HOE.get());
-        }
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call

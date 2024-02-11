@@ -1,6 +1,7 @@
 package com.riverstone.unknown303.oretools.items;
 
 import com.riverstone.unknown303.oretools.OreMod;
+import com.riverstone.unknown303.oretools.sounds.ModSounds;
 import net.minecraft.Util;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
@@ -14,7 +15,7 @@ import java.util.function.Supplier;
 
 public enum ModArmorMaterials implements ArmorMaterial {
     LAPIS("lapis", 27, new int[]{ 3, 8, 6, 3 }, 32,
-            SoundEvents.ARMOR_EQUIP_DIAMOND, 1.75f, 0.0F, () -> Ingredient.of(Items.LAPIS_LAZULI));
+            ModSounds.ARMOR_EQUIP_LAPIS.get(), 1.75f, 0.0F, () -> Ingredient.of(Items.LAPIS_LAZULI));
 
     private final String name;
     private final int[] durability;
