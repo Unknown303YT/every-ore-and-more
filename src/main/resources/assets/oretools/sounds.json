@@ -1,0 +1,8 @@
+{
+  "armor_equip_lapis": {
+    "subtitles": "subtitles.oretools.item.armor.equip_lapis",
+    "sounds": [
+      "oretools:armor_equip_lapis"
+    ]
+  }
+}

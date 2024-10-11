@@ -10,6 +10,17 @@
   "item.oretools.lapis_leggings": "Lapis Lazuli Leggings",
   "item.oretools.lapis_boots": "Lapis Lazuli Boots",
 
+  "subtitles.oretools.item.armor.equip_lapis": "Lapis Armor Clangs",
+
+  "advancements.oretools.root.title": "Every Ore and More",
+  "advancements.oretools.root.description": "Advancements from Every Ore and More",
+
+  "advancements.oretools.lapis_armor.title": "Contained Power",
+  "advancements.oretools.lapis_armor.description": "Obtain a piece of Lapis Lazuli Armor",
+
+  "advancements.oretools.lapis_sword_or_axe.title": "Harnessed Power",
+  "advancements.oretools.lapis_sword_or_axe.description": "Hurt an entity with a Lapis Lazuli Sword or Axe",
+
   "creativetabs.oretools.oretools_tools": "Every Ore Tools",
   "creativetabs.oretools.oretools_armor": "Every Ore Armor"
 }

@@ -2,6 +2,9 @@ package com.riverstone.unknown303.oretools.items.custom;
 
 import com.google.common.collect.ImmutableMap;
 import com.riverstone.unknown303.oretools.items.ModArmorMaterials;
+import net.minecraft.advancements.Advancement;
+import net.minecraft.client.Minecraft;
+import net.minecraft.server.MinecraftServer;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.player.Player;
@@ -9,11 +12,17 @@ import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.ArmorMaterial;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
+import org.checkerframework.checker.units.qual.A;
 
 import java.util.Map;
+import java.util.Objects;
 
 public class ModArmorItem extends ArmorItem {
     private static final Map<ArmorMaterial, MobEffectInstance> MATERIAL_TO_EFFECT_MAP =
+            (new ImmutableMap.Builder<ArmorMaterial, MobEffectInstance>())
+                    .put(ModArmorMaterials.LAPIS, new MobEffectInstance(MobEffects.SATURATION, 1800, 8,
+                            false, true, true)).build();
+    private static final Map<ArmorMaterial, MobEffectInstance> SECOND_MATERIAL_TO_EFFECT_MAP =
             (new ImmutableMap.Builder<ArmorMaterial, MobEffectInstance>())
                     .put(ModArmorMaterials.LAPIS, new MobEffectInstance(MobEffects.SATURATION, 1800, 8,
                             false, true, true)).build();
@@ -41,18 +50,20 @@ public class ModArmorItem extends ArmorItem {
                 addStatusEffectForMaterial(player, mapArmorMaterial, mapMobEffect);
             }
         }
+        for (Map.Entry<ArmorMaterial, MobEffectInstance> entry : SECOND_MATERIAL_TO_EFFECT_MAP.entrySet()) {
+            ArmorMaterial mapArmorMaterial = entry.getKey();
+            MobEffectInstance mapMobEffect = entry.getValue();
+
+            if (hasCorrectArmorOn(mapArmorMaterial, player)) {
+                addStatusEffectForMaterial(player, mapArmorMaterial, mapMobEffect);
+            }
+        }
     }
 
     private void addStatusEffectForMaterial(Player player, ArmorMaterial armorMaterial,
                                             MobEffectInstance mobEffect) {
         boolean hasPlayerEffect = player.hasEffect(mobEffect.getEffect());
-        boolean hasDolphinsGrace = player.hasEffect(MobEffects.DOLPHINS_GRACE);
 
-        if (hasLapisArmorOn(armorMaterial, player) && !hasPlayerEffect && !hasDolphinsGrace) {
-            player.addEffect(new MobEffectInstance(mobEffect));
-            player.addEffect(new MobEffectInstance(MobEffects.DOLPHINS_GRACE, 1100, 0,
-                    false, true, false));
-        }
         if (hasCorrectArmorOn(armorMaterial, player) && !hasPlayerEffect) {
             player.addEffect(new MobEffectInstance(mobEffect));
         }
@@ -82,21 +93,5 @@ public class ModArmorItem extends ArmorItem {
 
         return helmet.getMaterial() == armorMaterial && chestplate.getMaterial() == armorMaterial &&
                 leggings.getMaterial() == armorMaterial && boots.getMaterial() == armorMaterial;
-    }
-
-    private boolean hasLapisArmorOn(ArmorMaterial armorMaterial, Player player) {
-        for (ItemStack armorStack : player.getInventory().armor) {
-            if (!(armorStack.getItem() instanceof ArmorItem)) {
-                return false;
-            }
-        }
-
-        ArmorItem helmet = ((ArmorItem) player.getInventory().getArmor(3).getItem());
-        ArmorItem chestplate = ((ArmorItem) player.getInventory().getArmor(2).getItem());
-        ArmorItem leggings = ((ArmorItem) player.getInventory().getArmor(1).getItem());
-        ArmorItem boots = ((ArmorItem) player.getInventory().getArmor(0).getItem());
-
-        return helmet.getMaterial() == ModArmorMaterials.LAPIS && chestplate.getMaterial() == ModArmorMaterials.LAPIS &&
-                leggings.getMaterial() == ModArmorMaterials.LAPIS && boots.getMaterial() == ModArmorMaterials.LAPIS;
     }
 }

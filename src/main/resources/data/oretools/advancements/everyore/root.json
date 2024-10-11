@@ -1,0 +1,46 @@
+{
+  "display": {
+    "icon": {
+      "item": "oretools:lapis_axe"
+    },
+    "title": {
+      "translate": "advancements.oretools.everyore.root.title"
+    },
+    "description": {
+      "translate": "advancements.oretools.everyore.root.description"
+    },
+    "background": "minecraft:textures/block/lapis_block.png",
+    "frame": "challenge",
+    "show_toast": false,
+    "announce_to_chat": false ,
+    "hidden": false
+  },
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "oretools:lapis_sword",
+              "oretools:lapis_axe",
+              "oretools:lapis_pickaxe",
+              "oretools:lapis_shovel",
+              "oretools:lapis_hoe",
+              "oretools:lapis_helmet",
+              "oretools:lapis_chestplate",
+              "oretools:lapis_leggings",
+              "oretools:lapis_boots"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "minecraft:inventory_changed"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

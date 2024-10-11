@@ -14,6 +14,8 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
+import java.util.Properties;
+
 public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS, OreMod.MOD_ID);
@@ -62,6 +64,16 @@ public class ModItems {
     public static final RegistryObject<Item> LAPIS_BOOTS = ITEMS.register("lapis_boots",
             () -> new ModArmorItem(ModArmorMaterials.LAPIS, ArmorItem.Type.BOOTS,
                     new Item.Properties().stacksTo(1)));
+
+    public static final RegistryObject<Item> LAPIS_HORSE_ARMOR = registerHorseArmor("lapis_horse_armor",
+            ModArmorMaterials.LAPIS, new Item.Properties().stacksTo(1));
+
+    public static final RegistryObject<Item> NETHERITE_HORSE_ARMOR = registerHorseArmor("netherite_horse_armor",
+            ArmorMaterials.NETHERITE, new Item.Properties().stacksTo(1));
+
+    static RegistryObject<Item> registerHorseArmor(String name, ArmorMaterial armorMaterial, Item.Properties properties) {
+        return ITEMS.register(name, () -> new HorseArmorItem(armorMaterial.getDefenseForType(ArmorItem.Type.CHESTPLATE), name, properties));
+    }
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

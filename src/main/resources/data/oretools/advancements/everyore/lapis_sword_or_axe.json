@@ -1,0 +1,46 @@
+{
+  "parent": "oretools:everyore/lapis_armor",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:player_hurt_entity",
+      "conditions": {
+        "source_entity": {
+          "equipment": {
+            "mainhand": {
+              "items": [
+                {
+                  "items": [
+                    "oretools:lapis_sword",
+                    "oretools:lapis_axe"
+                  ]
+                }
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "translate": "advancements.oretools.lapis_sword_or_axe.description"
+    },
+    "frame": "challenge",
+    "hidden": false,
+    "icon": {
+      "item": "oretools:lapis_sword",
+      "nbt": "{Enchantments:[{}],HideFlags:1}"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancements.oretools.lapis_sword_or_axe.title"
+    }
+  },
+  "requirements": [
+    [
+      "minecraft:player_hurt_entity"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

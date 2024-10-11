@@ -1,0 +1,42 @@
+{
+  "parent": "oretools:everyore/root",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "oretools:lapis_helmet",
+              "oretools:lapis_chestplate",
+              "oretools:lapis_leggings",
+              "oretools:lapis_boots"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "translate": "advancements.oretools.lapis_armor.description"
+    },
+    "frame": "challenge",
+    "hidden": false,
+    "icon": {
+      "item": "oretools:lapis_helmet",
+      "nbt": "{Enchantments:[{}],HideFlags:1}"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancements.oretools.lapis_armor.title"
+    }
+  },
+  "requirements": [
+    [
+      "minecraft:inventory_changed"
+    ]
+  ],
+  "sends_telemetry_event": true
+}
