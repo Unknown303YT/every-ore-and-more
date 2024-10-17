@@ -1,5 +1,7 @@
 package com.riverstone.unknown303.oretools.items;
 
+import com.riverstone.unknown303.errorlib.api.CustomRegistries;
+import com.riverstone.unknown303.errorlib.api.HorseArmorRegistry;
 import com.riverstone.unknown303.oretools.OreMod;
 import com.riverstone.unknown303.oretools.items.custom.ModArmorItem;
 import net.minecraft.world.effect.MobEffectInstance;
@@ -19,6 +21,7 @@ import java.util.Properties;
 public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS, OreMod.MOD_ID);
+    public static final HorseArmorRegistry HORSE_ARMOR_REGISTRY = new HorseArmorRegistry(OreMod.MOD_ID, "horse_armor");
 
     public static final RegistryObject<Item> LAPIS_SWORD = ITEMS.register("lapis_sword",
             () -> new SwordItem(ModToolTiers.LAPIS, 3, -2.3f,
@@ -65,15 +68,11 @@ public class ModItems {
             () -> new ModArmorItem(ModArmorMaterials.LAPIS, ArmorItem.Type.BOOTS,
                     new Item.Properties().stacksTo(1)));
 
-    public static final RegistryObject<Item> LAPIS_HORSE_ARMOR = registerHorseArmor("lapis_horse_armor",
-            ModArmorMaterials.LAPIS, new Item.Properties().stacksTo(1));
+    public static final RegistryObject<Item> LAPIS_HORSE_ARMOR = HORSE_ARMOR_REGISTRY.registerHorseArmorItem(ModArmorMaterials.LAPIS,
+            new Item.Properties());
 
-    public static final RegistryObject<Item> NETHERITE_HORSE_ARMOR = registerHorseArmor("netherite_horse_armor",
-            ArmorMaterials.NETHERITE, new Item.Properties().stacksTo(1));
-
-    static RegistryObject<Item> registerHorseArmor(String name, ArmorMaterial armorMaterial, Item.Properties properties) {
-        return ITEMS.register(name, () -> new HorseArmorItem(armorMaterial.getDefenseForType(ArmorItem.Type.CHESTPLATE), name, properties));
-    }
+    public static final RegistryObject<Item> NETHERITE_HORSE_ARMOR = HORSE_ARMOR_REGISTRY.registerHorseArmorItem(ArmorMaterials.NETHERITE,
+            new Item.Properties().fireResistant());
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
