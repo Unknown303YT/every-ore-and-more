@@ -68,10 +68,10 @@ public class ModItems {
             () -> new ModArmorItem(ModArmorMaterials.LAPIS, ArmorItem.Type.BOOTS,
                     new Item.Properties().stacksTo(1)));
 
-    public static final RegistryObject<Item> LAPIS_HORSE_ARMOR = HORSE_ARMOR_REGISTRY.registerHorseArmorItem(ModArmorMaterials.LAPIS,
+    public static final RegistryObject<Item> LAPIS_HORSE_ARMOR = HORSE_ARMOR_REGISTRY.registerHorseArmor(ModArmorMaterials.LAPIS,
             new Item.Properties());
 
-    public static final RegistryObject<Item> NETHERITE_HORSE_ARMOR = HORSE_ARMOR_REGISTRY.registerHorseArmorItem(ArmorMaterials.NETHERITE,
+    public static final RegistryObject<Item> NETHERITE_HORSE_ARMOR = HORSE_ARMOR_REGISTRY.registerHorseArmor(ArmorMaterials.NETHERITE,
             new Item.Properties().fireResistant());
 
     public static void register(IEventBus eventBus) {

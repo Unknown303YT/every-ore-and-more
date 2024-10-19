@@ -13,10 +13,12 @@ import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import org.jetbrains.annotations.NotNull;
 import org.slf4j.Logger;
 
 // The value here should match an entry in the META-INF/mods.toml file
@@ -25,16 +27,14 @@ public class OreMod {
     public static final String MOD_ID = "oretools";
     public static final Logger LOGGER = LogUtils.getLogger();
 
-    public OreMod(FMLJavaModLoadingContext context) {
+    public OreMod(@NotNull FMLJavaModLoadingContext context) {
         IEventBus modEventBus = context.getModEventBus();
-        CustomRegistries.register(ModItems.HORSE_ARMOR_REGISTRY);
+        CustomRegistries.addRegistry(ModItems.HORSE_ARMOR_REGISTRY);
 
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
 
         ModSounds.register(modEventBus);
-
-        CustomRegistries.register(modEventBus);
 
         ModCreativeTabs.register(modEventBus);
 
