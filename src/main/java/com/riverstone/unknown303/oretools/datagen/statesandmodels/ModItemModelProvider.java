@@ -49,7 +49,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         trimmedArmorItem(ModItems.LAPIS_CHESTPLATE);
         trimmedArmorItem(ModItems.LAPIS_LEGGINGS);
         trimmedArmorItem(ModItems.LAPIS_BOOTS);
-        simpleItem(ModItems.LAPIS_HORSE_ARMOR);
+//        simpleItem(ModItems.LAPIS_HORSE_ARMOR);
 
         simpleItem(ModItems.NETHERITE_HORSE_ARMOR);
     }

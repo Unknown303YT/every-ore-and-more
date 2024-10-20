@@ -1,7 +1,5 @@
 package com.riverstone.unknown303.oretools.items;
 
-import com.riverstone.unknown303.errorlib.api.CustomRegistries;
-import com.riverstone.unknown303.errorlib.api.HorseArmorRegistry;
 import com.riverstone.unknown303.oretools.OreMod;
 import com.riverstone.unknown303.oretools.items.custom.ModArmorItem;
 import net.minecraft.world.effect.MobEffectInstance;
@@ -9,19 +7,15 @@ import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.fml.ModList;
-import net.minecraftforge.fml.ModLoadingContext;
-import net.minecraftforge.fml.VersionChecker;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
-import java.util.Properties;
+import static com.riverstone.unknown303.oretools.OreMod.HORSE_ARMOR_REGISTRY;
 
 public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS, OreMod.MOD_ID);
-    public static final HorseArmorRegistry HORSE_ARMOR_REGISTRY = new HorseArmorRegistry(OreMod.MOD_ID, "horse_armor");
 
     public static final RegistryObject<Item> LAPIS_SWORD = ITEMS.register("lapis_sword",
             () -> new SwordItem(ModToolTiers.LAPIS, 3, -2.3f,
@@ -71,7 +65,7 @@ public class ModItems {
     public static final RegistryObject<Item> LAPIS_HORSE_ARMOR = HORSE_ARMOR_REGISTRY.registerHorseArmor(ModArmorMaterials.LAPIS,
             new Item.Properties());
 
-    public static final RegistryObject<Item> NETHERITE_HORSE_ARMOR = HORSE_ARMOR_REGISTRY.registerHorseArmor(ArmorMaterials.NETHERITE,
+    public static final RegistryObject<Item> NETHERITE_HORSE_ARMOR = HORSE_ARMOR_REGISTRY.registerVanillaHorseArmor(ArmorMaterials.NETHERITE,
             new Item.Properties().fireResistant());
 
     public static void register(IEventBus eventBus) {

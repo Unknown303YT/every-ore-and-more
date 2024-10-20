@@ -7,6 +7,7 @@ import com.riverstone.unknown303.oretools.blocks.ModBlocks;
 import com.riverstone.unknown303.oretools.items.ModCreativeTabs;
 import com.riverstone.unknown303.oretools.items.ModItems;
 import com.riverstone.unknown303.oretools.sounds.ModSounds;
+import net.minecraft.world.entity.animal.horse.Horse;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -26,10 +27,12 @@ import org.slf4j.Logger;
 public class OreMod {
     public static final String MOD_ID = "oretools";
     public static final Logger LOGGER = LogUtils.getLogger();
+    public static HorseArmorRegistry HORSE_ARMOR_REGISTRY;
 
     public OreMod(@NotNull FMLJavaModLoadingContext context) {
         IEventBus modEventBus = context.getModEventBus();
-        CustomRegistries.addRegistry(ModItems.HORSE_ARMOR_REGISTRY);
+        HORSE_ARMOR_REGISTRY = (HorseArmorRegistry)
+                CustomRegistries.addRegistry(new HorseArmorRegistry(MOD_ID, "horse_armor"));
 
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);

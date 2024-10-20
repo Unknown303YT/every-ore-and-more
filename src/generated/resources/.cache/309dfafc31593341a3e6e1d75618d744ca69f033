@@ -1,4 +1,4 @@
-// 1.20.1	2024-01-26T13:33:25.4523815	Item Models: oretools
+// 1.20.1	2024-10-19T19:07:19.6549519	Item Models: oretools
 6e8b03a2c7549b4275da650b029251cccb3420de assets/oretools/models/item/lapis_axe.json
 03fd7a68f94ed4465b5d09ba7ed8fe298f3ec7b5 assets/oretools/models/item/lapis_boots.json
 659b53c8006a933be32000f5546b80551f2e0a5b assets/oretools/models/item/lapis_boots_amethyst_trim.json
@@ -48,3 +48,4 @@ e6257f7e84ef2102c829d020310d4db0a5ba10b6 assets/oretools/models/item/lapis_leggi
 ccc06faeec82382f534c556fc67be9518e4ac275 assets/oretools/models/item/lapis_pickaxe.json
 5e0a30a31c42c7c4158471a85d1567d94a5ff293 assets/oretools/models/item/lapis_shovel.json
 b108c0e492b261b88a1827e0c3913dab05fbe396 assets/oretools/models/item/lapis_sword.json
+bbe1b53f3d302632774fb8e70bb34c2f3624db9f assets/oretools/models/item/netherite_horse_armor.json
