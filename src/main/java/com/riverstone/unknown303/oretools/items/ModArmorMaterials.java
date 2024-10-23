@@ -95,7 +95,7 @@ public enum ModArmorMaterials implements CustomArmorMaterial {
     }
 
     @Override
-    public String getNamePath() {
+    public String getPath() {
         return this.name.getPath();
     }
 

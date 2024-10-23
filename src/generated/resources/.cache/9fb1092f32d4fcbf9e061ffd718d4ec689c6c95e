@@ -1,4 +1,6 @@
-// 1.20.1	2024-01-26T14:30:57.1507892	Recipes
+// 1.20.1	2024-10-23T19:55:32.0469042	Recipes
+ff6184d59e7e572f916f3715f416ff123bc1a2bf data/minecraft/advancements/recipes/combat/netherite_horse_armor_smithing.json
+b64817c9f0b048697207ad72cb8fcfa8b5f18b7d data/minecraft/recipes/netherite_horse_armor_smithing.json
 c788df087656d3055dfff3137559eb3912ff531f data/oretools/advancements/recipes/combat/lapis_boots.json
 76700576772fd20daaec83f7be921eddb47ca98a data/oretools/advancements/recipes/combat/lapis_chestplate.json
 0515146afbef5ab705f8fd8c7cf9198fcf3f31d5 data/oretools/advancements/recipes/combat/lapis_helmet.json

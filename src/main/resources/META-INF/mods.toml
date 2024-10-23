@@ -68,7 +68,7 @@ Other blocks and items are planned (including as well as Chainmail Tools and Cop
     modId="errorlib"
     mandatory=true
     # This version range declares a minimum of the current minecraft version up to but not including the next major version
-    versionRange="[0.2.1,0.3)"
+    versionRange="${errorlib_version_range}"
     ordering="BEFORE"
     side="BOTH"
 

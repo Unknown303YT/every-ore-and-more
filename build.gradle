@@ -134,10 +134,8 @@ dependencies {
 //    // at runtime, use the full JEI jar for Forge
 //    runtimeOnly(fg.deobf("mezz.jei:jei-${minecraft_version}-forge:${jei_version}"))
 
-    // compile against the ErrorLib API but do not include it at runtime
-    compileOnly(fg.deobf("com.riversone.unknown303:errorlib-${errorlib_version}:${minecraft_version}-api"))
-    // at runtime, use the full ErrorLib jar for Forge
-    runtimeOnly(fg.deobf("com.riverstone.unknown303:errorlib-${errorlib_version}:${minecraft_version}"))
+    // implement the ErrorLib API
+    implementation(fg.deobf("com.riverstone.unknown303:errorlib-${errorlib_version}:${minecraft_version}-api"))
 
     // For more info:
     // http://www.gradle.org/docs/current/userguide/artifact_dependencies_tutorial.html
@@ -155,6 +153,7 @@ tasks.named('processResources', ProcessResources).configure {
             loader_version_range: loader_version_range,
             mod_id: mod_id, mod_name: mod_name, mod_license: mod_license, mod_version: mod_version,
             mod_authors: mod_authors, mod_description: mod_description,
+            errorlib_version: errorlib_version, errorlib_version_range: errorlib_version_range,
     ]
     inputs.properties replaceProperties
 
