@@ -1,6 +1,6 @@
 package com.riverstone.unknown303.oretools.items;
 
-import com.riverstone.unknown303.errorlib.api.CustomArmorMaterial;
+import com.riverstone.unknown303.errorlib.api.misc.CustomArmorMaterial;
 import com.riverstone.unknown303.oretools.OreMod;
 import com.riverstone.unknown303.oretools.sounds.ModSounds;
 import net.minecraft.resources.ResourceLocation;
@@ -18,7 +18,7 @@ import java.util.function.Supplier;
 
 public enum ModArmorMaterials implements CustomArmorMaterial {
     LAPIS(new ResourceLocation(OreMod.MOD_ID, "lapis"), 27, new int[]{ 3, 8, 6, 3 }, 32,
-            ModSounds.ARMOR_EQUIP_LAPIS, 1.75f, 0.0F, () -> Ingredient.of(ModItems.CONDENSED_LAPIS.get()));
+            ModSounds.ARMOR_EQUIP_LAPIS, 1.75f, 0.0F, () -> Ingredient.of(Items.LAPIS_LAZULI));
 
     private final ResourceLocation name;
     private final int[] durability;
