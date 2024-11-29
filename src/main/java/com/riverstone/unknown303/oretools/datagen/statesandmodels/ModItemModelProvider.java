@@ -19,7 +19,7 @@ import net.minecraftforge.registries.RegistryObject;
 import java.util.LinkedHashMap;
 
 public class ModItemModelProvider extends ItemModelProvider {
-    private static LinkedHashMap<ResourceKey<TrimMaterial>, Float> trimMaterials = new LinkedHashMap<>();
+    private static final LinkedHashMap<ResourceKey<TrimMaterial>, Float> trimMaterials = new LinkedHashMap<>();
     static {
         trimMaterials.put(TrimMaterials.QUARTZ, 0.1F);
         trimMaterials.put(TrimMaterials.IRON, 0.2F);
@@ -59,10 +59,9 @@ public class ModItemModelProvider extends ItemModelProvider {
         final String MOD_ID = OreMod.MOD_ID;
 
         if(itemRegistryObject.get() instanceof ArmorItem armorItem) {
-            trimMaterials.entrySet().forEach(entry -> {
+            trimMaterials.forEach((trimMaterial, value) -> {
 
-                ResourceKey<TrimMaterial> trimMaterial = entry.getKey();
-                float trimValue = entry.getValue();
+                float trimValue = value;
 
                 String armorType = switch (armorItem.getEquipmentSlot()) {
                     case HEAD -> "helmet";

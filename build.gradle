@@ -135,7 +135,9 @@ dependencies {
 //    runtimeOnly(fg.deobf("mezz.jei:jei-${minecraft_version}-forge:${jei_version}"))
 
     // implement the ErrorLib API
-    implementation(fg.deobf("com.riverstone.unknown303:errorlib-${errorlib_version}:${minecraft_version}-api"))
+//    implementation(fg.deobf("com.riverstone.unknown303:errorlib-${errorlib_version}:${minecraft_version}-api"))
+    compileOnly(fg.deobf("com.riverstone.unknown303:errorlib-${errorlib_version}:${minecraft_version}-api"))
+    runtimeOnly(fg.deobf("com.riverstone.unknown303:errorlib-${errorlib_version}:${minecraft_version}-api"))
 
     // For more info:
     // http://www.gradle.org/docs/current/userguide/artifact_dependencies_tutorial.html
