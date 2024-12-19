@@ -1,4 +1,4 @@
-// 1.20.1	2024-10-19T19:07:19.6549519	Item Models: oretools
+// 1.20.1	2024-12-18T17:04:53.9244656	Item Models: oretools
 6e8b03a2c7549b4275da650b029251cccb3420de assets/oretools/models/item/lapis_axe.json
 03fd7a68f94ed4465b5d09ba7ed8fe298f3ec7b5 assets/oretools/models/item/lapis_boots.json
 659b53c8006a933be32000f5546b80551f2e0a5b assets/oretools/models/item/lapis_boots_amethyst_trim.json
@@ -34,6 +34,7 @@ db3a604b134b60bccd4ce716d02f2d5e7f15fd1a assets/oretools/models/item/lapis_helme
 6c7a9892eecd03cca1cb5268d2406ecb110fb0cc assets/oretools/models/item/lapis_helmet_quartz_trim.json
 bd68a9acca2c36af8da8a21e2571c0b331e4c3bc assets/oretools/models/item/lapis_helmet_redstone_trim.json
 65dd675d7eca2cdaa77b922d4106e821483472b6 assets/oretools/models/item/lapis_hoe.json
+94c3bc86680efa91c5bd30c35cd790cf6c139b22 assets/oretools/models/item/lapis_horse_armor.json
 c17cc6433075af5db24cec666e7d9a85520c8480 assets/oretools/models/item/lapis_leggings.json
 92543942c568871878326da69105af694062a8b0 assets/oretools/models/item/lapis_leggings_amethyst_trim.json
 71e4e92830854c632d43c80afe3eb40fdf7e1732 assets/oretools/models/item/lapis_leggings_copper_trim.json

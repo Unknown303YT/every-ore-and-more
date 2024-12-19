@@ -33,7 +33,7 @@ public class ModCreativeTabs {
                         pOutput.accept(ModItems.LAPIS_CHESTPLATE.get());
                         pOutput.accept(ModItems.LAPIS_LEGGINGS.get());
                         pOutput.accept(ModItems.LAPIS_BOOTS.get());
-//                        pOutput.accept(ModItems.LAPIS_HORSE_ARMOR.get());
+                        pOutput.accept(ModItems.LAPIS_HORSE_ARMOR.get());
                         pOutput.accept(ModItems.NETHERITE_HORSE_ARMOR.get());
                     }))
                     .withTabsBefore(ORE_TOOLS.getKey())
